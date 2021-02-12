@@ -163,17 +163,17 @@ public class ReaderMain extends Frame{
 					robot.delay(5);  
 					//robot.mouseRelease(InputEvent.BUTTON1_MASK);
 					//robot.delay(5); 
-					for(int i=0;i<1000000;i++) {
-					robot.mousePress(InputEvent.BUTTON1_MASK);
+					//**for(int i=0;i<1000000;i++) {
+					//robot.mousePress(InputEvent.BUTTON1_MASK);
 					//robot.mouseWheel(1);
 					robot.delay(1);
 					//robot.delay(10); 
 					
-					//robot.mouseWheel(1);
-					//robot.mouseWheel(1);
-					robot.mouseRelease(InputEvent.BUTTON1_MASK);
-					}
-					//robot.mouseMove(tempX, tempY); 
+					robot.mouseWheel(1);//同步进程
+					robot.mouseWheel(1);//加速
+					//*robot.mouseRelease(InputEvent.BUTTON1_MASK);
+					//**}
+					robot.mouseMove(tempX, tempY);//复位 
 					System.out.println("pos"+posX +" "+ posY);
 					robot.mouseMove(tempX, tempY);
 					System.out.println("temp"+tempX +" "+ tempY);
